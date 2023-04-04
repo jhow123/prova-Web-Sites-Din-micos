@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat do jhow</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Adicione o CSS da biblioteca slick slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <style>
+      #slider {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider">
+      <div><img src="imagem1.png" style="max-width: 500px; max-height: 500px;" /></div>
+      <div><img src="imagem2.png" style="max-width: 500px; max-height: 500px;" /></div>
+      <div><img src="imagem3.png" style="max-width: 500px; max-height: 500px;" /></div>
+    </div>
+    <div id="chat-window">
+      <div id="chat-output"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Digite sua pergunta..." />
+        <button type="submit">Enviar</button>
+      </form>
+      <button id="clear-button" class="clear-chat-button">Limpar Pergunta...</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Adicione a biblioteca slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Inicialize o slide após o carregamento da página
+      $(document).ready(function () {
+        $('#slider').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear',
+        });
+      });
+    </script>
+  </body>
+</html>
